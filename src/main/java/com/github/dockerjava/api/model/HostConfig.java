@@ -174,7 +174,7 @@ public class HostConfig implements Serializable {
      * @since {@link RemoteApiVersion#VERSION_1_20}
      */
     @JsonProperty("SecurityOpt")
-    private List<String> securityOpts;
+    private String[] securityOpts;
 
     /**
      * @since {@link RemoteApiVersion#VERSION_1_20}
@@ -387,7 +387,7 @@ public class HostConfig implements Serializable {
      * @see #securityOpts
      */
     @CheckForNull
-    public List<String> getSecurityOpts() {
+    public String[] getSecurityOpts() {
         return securityOpts;
     }
 
@@ -758,7 +758,7 @@ public class HostConfig implements Serializable {
     /**
      * @see #securityOpts
      */
-    public HostConfig withSecurityOpts(List<String> securityOpts) {
+    public HostConfig withSecurityOpts(String[] securityOpts) {
         this.securityOpts = securityOpts;
         return this;
     }

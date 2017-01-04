@@ -483,6 +483,12 @@ public class CreateContainerCmdImpl extends AbstrDockerCmd<CreateContainerCmd, C
     }
 
     @Override
+    @JsonIgnore
+    public String[] getSecurityOpts() {
+        return hostConfig.getSecurityOpts();
+    }
+
+    @Override
     public CreateContainerCmd withAliases(String... aliases) {
         this.aliases = Arrays.asList(aliases);
         return this;
@@ -985,6 +991,17 @@ public class CreateContainerCmdImpl extends AbstrDockerCmd<CreateContainerCmd, C
     public CreateContainerCmd withHostConfig(HostConfig hostConfig) {
         this.hostConfig = hostConfig;
         return this;
+    }
+
+    public CreateContainerCmd withSecurityOpts(String... securityOpt) {
+        this.hostConfig.withSecurityOpts(securityOpt);
+        return this;
+    }
+
+    @Override
+    public CreateContainerCmd withSecurityOpts(List<String> securityOpt) {
+        checkNotNull(securityOpt, "security_opt was not specified");
+        return withSecurityOpts(securityOpt.toArray(new String[securityOpt.size()]));
     }
 
     @Override
