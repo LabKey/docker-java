@@ -51,23 +51,23 @@ For secure tls (https) communication:
     DOCKER_CERT_PATH=/Users/marcus/.docker/machine/machines/docker-1.11.2
 
 ### Latest release version
-Supports a subset of the Docker Remote API [v1.23](https://github.com/docker/docker/blob/master/docs/reference/api/docker_remote_api_v1.23.md), Docker Server version 1.11.x
+Supports a subset of the Docker Remote API [v1.23](https://github.com/docker/docker/blob/master/docs/api/v1.23.md), Docker Server version 1.11.x
 
     <dependency>
           <groupId>com.github.docker-java</groupId>
           <artifactId>docker-java</artifactId>
-          <version>3.0.3</version>
+          <version>3.0.6</version>
     </dependency>
     
 ### Latest development version
-Supports a subset of the Docker Remote API [v1.23](https://github.com/docker/docker/blob/master/docs/reference/api/docker_remote_api_v1.23.md), Docker Server version 1.11.x
+Supports a subset of the Docker Remote API [v1.23](https://github.com/docker/docker/blob/master/docs/api/v1.23.md), Docker Server version 1.11.x
 
 You can find the latest development version including javadoc and source files on [Sonatypes OSS repository](https://oss.sonatype.org/content/groups/public/com/github/docker-java/docker-java/).
 
     <dependency>
           <groupId>com.github.docker-java</groupId>
           <artifactId>docker-java</artifactId>
-          <version>3.0.4-SNAPSHOT</version>
+          <version>3.0.7-SNAPSHOT</version>
     </dependency>
     
 
